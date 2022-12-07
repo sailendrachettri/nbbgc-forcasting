@@ -1,0 +1,8 @@
+
+#weatherCardsContainer {
+    background-image: url('/img/in.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
