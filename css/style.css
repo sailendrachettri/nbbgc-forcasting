@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Space+Grotesk&display=swap');
 
 #weatherCardsContainer {
     background-image: url('/img/in.png');
@@ -5,4 +6,17 @@
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+}
+
+.statesNames{
+    font-family: 'Bree Serif', serif;
+    font-weight: 400;
+}
+
+.addInfos{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.temps{
+    color: green;
 }
