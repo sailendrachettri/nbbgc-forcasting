@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Orbitron:wght@400;500;900&family=Space+Grotesk:wght@400;700&display=swap');
 
 #weatherCardsContainer {
     background-image: url('/img/in.png');
@@ -8,6 +8,21 @@
     position: relative;
 }
 
+#nbbgcLogo{
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+
+#nbbgcIntro{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+
+#intro{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
 .statesNames{
     font-family: 'Bree Serif', serif;
     font-weight: 400;
@@ -15,8 +30,9 @@
 
 .addInfos{
     font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
 }
 
 .temps{
-    color: green;
+    color: rgb(11 139 115);
 }
