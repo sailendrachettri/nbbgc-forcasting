@@ -9,9 +9,9 @@ footerYear.innerText = year;
 // footer countdown
 let count = 0;
 let footerCount = document.getElementById('footerCount');
-function countDownSeconds(){
-	count += 1;
-	footerCount.innerHTML = count;
+function countDownSeconds() {
+    count += 1;
+    footerCount.innerHTML = count;
 }
 setInterval(countDownSeconds, 1000);
 
@@ -19,7 +19,7 @@ setInterval(countDownSeconds, 1000);
 
 // ________________________NAVBAR DATE AND TIME STARTED________________________
 let todaysDate = date.getDate();
-let month = date.getMonth()+1;
+let month = date.getMonth() + 1;
 let hour = date.getHours();
 let minutes = date.getMinutes();
 let seconds = date.getSeconds();
@@ -40,9 +40,11 @@ setAmPm.innerHTML = amPM;
 
 // ________________________AUTO SCROLL FUNCNALITY STARTED________________________
 function pageScroll() {
-    window.scrollBy(0,1);
-    scrolldelay = setTimeout(pageScroll(),10);
+    window.scrollBy(0, 1);
+    scrolldelay = setTimeout(pageScroll, 100);
 }
 
-pageScroll();
+let flexSwitchCheckDefault = document.getElementById('flexSwitchCheckDefault');
+flexSwitchCheckDefault.addEventListener('click', pageScroll);
+
 // ________________________AUTO SCROLL FUNCNALITY ENDED________________________

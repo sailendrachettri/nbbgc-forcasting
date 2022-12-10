@@ -351,7 +351,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tamil Nadu',
 	})
 .catch(err => console.error(err));
 
-fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Telangana', options)
+fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Hyderabad', options)
 	.then(response => response.json())
 	.then((response) => {
 
