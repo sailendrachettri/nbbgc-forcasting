@@ -36,3 +36,7 @@
 .temps{
     color: rgb(11 139 115);
 }
+
+#dateTimeContainer{
+    opacity: 0.5;
+}

@@ -17,7 +17,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Prade
 		wind_speed1.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -32,7 +32,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Arunachal Pr
 		wind_speed2.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -47,7 +47,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Assam', opti
 		wind_speed3.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -62,7 +62,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Bihar', opti
 		wind_speed4.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -77,7 +77,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Chhattisgarh
 		wind_speed5.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -92,7 +92,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Goa', option
 		wind_speed6.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -107,7 +107,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Gujarat', op
 		wind_speed7.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -122,7 +122,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Haryana', op
 		wind_speed8.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -137,7 +137,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Himachal Pra
 		wind_speed9.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -152,7 +152,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Jharkhand', 
 		wind_speed10.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -167,7 +167,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Karnataka', 
 		wind_speed11.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -182,7 +182,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kerala', opt
 		wind_speed12.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -197,7 +197,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Madhya Prade
 		wind_speed13.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -212,7 +212,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Maharashtra'
 		wind_speed14.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -227,7 +227,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Manipur', op
 		wind_speed15.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -242,7 +242,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Meghalaya', 
 		wind_speed16.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -257,7 +257,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mizoram', op
 		wind_speed17.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -272,7 +272,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Nagaland', o
 		wind_speed18.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -287,7 +287,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Odisha', opt
 		wind_speed19.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -302,7 +302,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Punjab', opt
 		wind_speed20.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -317,7 +317,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Rajasthan', 
 		wind_speed21.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -332,7 +332,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Sikkim', opt
 		wind_speed22.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -347,7 +347,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tamil Nadu',
 		wind_speed23.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -362,7 +362,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Telangana', 
 		wind_speed24.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -377,7 +377,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tripura', op
 		wind_speed25.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -392,7 +392,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttar Prades
 		wind_speed26.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -407,7 +407,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttarakhand'
 		wind_speed27.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -422,7 +422,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=West Bengal'
 		wind_speed28.innerHTML = response.wind_speed
 
 
-		console.log(response)
+		//    console.log(response)
 	})
 .catch(err => console.error(err));
 
@@ -434,3 +434,26 @@ let year = date.getFullYear();
 
 footerYear.innerText = year;
 // ________________________FOOTER ENDED________________________
+
+// ________________________NAVBAR DATE AND TIME STARTED________________________
+let todaysDate = date.getDate();
+let month = date.getMonth()+1;
+let hour = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+let setMinutes = document.getElementById('setMinutes');
+let setAmPm = document.getElementById('setAmPm');
+
+let amPM = hour >= 12 ? 'pm' : 'am';
+hour = hour % 12;
+hour = hour ? hour : 12;
+minutes = minutes < 10 ? '0' + minutes : minutes; // if minutes is less than 10 the add 0 os it looks like something 01, 02 mins etc.
+
+let dateAndTime = document.getElementById("dateTime");
+dateAndTime.innerHTML = "Date & Time: " + todaysDate + "." + month + "." + year + " - " + hour + ":" + minutes;
+setAmPm.innerHTML = amPM;
+
+// ________________________NAVBAR DATE AND TIME ENDED________________________
+
+
+
