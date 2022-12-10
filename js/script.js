@@ -433,6 +433,16 @@ let date = new Date();
 let year = date.getFullYear();
 
 footerYear.innerText = year;
+
+// footer countdown
+let count = 0;
+let footerCount = document.getElementById('footerCount');
+function countDownSeconds(){
+	count += 1;
+	footerCount.innerHTML = count;
+}
+setInterval(countDownSeconds, 1000);
+
 // ________________________FOOTER ENDED________________________
 
 // ________________________NAVBAR DATE AND TIME STARTED________________________
