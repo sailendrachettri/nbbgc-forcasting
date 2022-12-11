@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Orbitron:wght@400;500;900&family=Space+Grotesk:wght@400;700&display=swap');
 
 #weatherCardsContainer {
-    background-image: url('/img/in.png');
+    background-image: url('/img/inOP1.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

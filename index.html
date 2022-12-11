@@ -28,22 +28,24 @@
             </a>
         </div>
 
-        <div class="container" id="dateTimeContainer">
-            <!-- will update by js  -->
-            <p> <span id="dateTime"> Date & Time: 00.00.0000 - 00:00 </span><span id="setAmPm">am</span> </p>
-        </div>
 
-        <div class="container" id="autoScrollToggle">
-            <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">handfree mode</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            </div>
-        </div>
     </nav>
     <!-- _______________________NAVIGATION BAR ENDED_______________________ -->
 
     <!-- _______________________STATE-WISE CARD STARTED_______________________ -->
     <div class="container-fluid" id="weatherCardsContainer">
+
+    <div class="container pt-4" id="autoScrollToggle">
+        <div class="form-check form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">handfree mode</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        </div>
+    </div>
+    <div class="container" id="dateTimeContainer">
+        <!-- will update by js  -->
+        <p> <span id="dateTime"> Today: 00.00.0000 - 00:00 </span><span id="setAmPm">am</span> </p>
+    </div>
+
         <div class="container py-3" id="temp">
             <h5 class="card-title mt-3" id="intro">All India state wise weather information</h5>
 
@@ -687,7 +689,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="/js/jsonData.js"></script>
+    <!-- <script src="/js/jsonData.js"></script> -->
     <script src="/js/common.js"></script>
 </body>
 

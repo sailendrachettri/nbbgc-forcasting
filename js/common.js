@@ -32,7 +32,7 @@ hour = hour ? hour : 12;
 minutes = minutes < 10 ? '0' + minutes : minutes; // if minutes is less than 10 the add 0 os it looks like something 01, 02 mins etc.
 
 let dateAndTime = document.getElementById("dateTime");
-dateAndTime.innerHTML = "Date & Time: " + todaysDate + "." + month + "." + year + " - " + hour + ":" + minutes;
+dateAndTime.innerHTML = "Today: " + todaysDate + "." + month + "." + year + " - " + hour + ":" + minutes;
 setAmPm.innerHTML = amPM;
 
 // ________________________NAVBAR DATE AND TIME ENDED________________________
