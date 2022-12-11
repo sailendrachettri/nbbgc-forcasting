@@ -6,6 +6,8 @@ const options = {
 	}
 };
 
+// api alternative: 5400ec26admsh5e70570b1dfb135p102582jsn68b10227f109
+
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Pradesh', options)
 	.then(response => response.json())
 	.then((response) => {
