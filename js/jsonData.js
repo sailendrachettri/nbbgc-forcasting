@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '87c05fdb63mshc6f545102925a69p1efaafjsn5fd53b3d0c9f',
+		'X-RapidAPI-Key': '8eb942e62fmshb1157e8fb54e693p1580e5jsn94ed81c94ed3',
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };
@@ -9,6 +9,7 @@ const options = {
 // api alternative 1: 31969a1614msh88ac34bc8e6c48bp1b89e5jsn30b700019bd0
 // api alternative 2: 5400ec26admsh5e70570b1dfb135p102582jsn68b10227f109
 // api alternative 3: 87c05fdb63mshc6f545102925a69p1efaafjsn5fd53b3d0c9f
+// api alternative 4: 8eb942e62fmshb1157e8fb54e693p1580e5jsn94ed81c94ed3
 
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Pradesh', options)
