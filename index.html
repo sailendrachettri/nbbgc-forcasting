@@ -32,555 +32,686 @@
     </nav>
     <!-- _______________________NAVIGATION BAR ENDED_______________________ -->
 
-    <!-- _______________________STATE-WISE CARD STARTED_______________________ -->
-    <div class="container-fluid" id="weatherCardsContainer">
-
-    <div class="container pt-4" id="autoScrollToggle">
-        <div class="form-check form-switch">
-            <label class="form-check-label" for="flexSwitchCheckDefault">handfree mode</label>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <div id="weatherCardsContainer">
+        <!-- _______________________DATE&TIME AND AUTOSCROLL STARTED_______________________ -->
+        <div class="container pt-4" id="autoScrollToggle">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="flexSwitchCheckDefault">handfree mode</label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            </div>
         </div>
-    </div>
-    <div class="container" id="dateTimeContainer">
-        <!-- will update by js  -->
-        <p> <span id="dateTime"> Today: 00.00.0000 - 00:00 </span><span id="setAmPm">am</span> </p>
-    </div>
+        <div class="container" id="dateTimeContainer">
+            <!-- will update by js  -->
+            <p> <span id="dateTime"> Today: 00.00.0000 - 00:00 </span><span id="setAmPm">am</span> </p>
+        </div>
+        <!-- _______________________DATE&TIME AND AUTOSCROLL STARTED_______________________ -->
 
-        <div class="container py-3" id="temp">
-            <h5 class="card-title mt-3" id="intro">All India state wise weather information</h5>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Andhra Pradesh</h5>
-                            <h5 class="card-title text-center temps"><span id="temp1"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity1">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp1">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp1">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed1">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Arunachal Pradesh </h5>
-                            <h5 class="card-title text-center temps"><span id="temp2"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity2">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp2">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp2">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed2">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- _______________________WEATHER SEARCH STARTED_______________________ -->
+        <div class="container" id="searchAndProgress">
+            <div class="container d-flex justify-content-center">
+                <form class="d-flex col-6" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Seacrh location" aria-label="Search"
+                        id="seacrhBox">
+                    <button class="btn btn-outline-success">Search</button>
+                </form>
             </div>
 
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Assam </h5>
-                            <h5 class="card-title text-center temps"><span id="temp3"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity3">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp3">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp3">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed3">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container d-flex justify-content-center flex-row" id="infoTable">
 
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Bihar</h5>
-                            <h5 class="card-title text-center temps"><span id="temp4"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity4">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp4">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp4">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed4">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <table class="table my-2">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Location</th>
+                            <th>Temperature</th>
+                            <th>Max Temperature</th>
+                            <th>Min Temperature</th>
+                            <th>Wind Speed</th>
+                            <th>Humidity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="gangtok">Gangtok </td>
+                            <td> <span id="gangtokTemp">null</span>&#176;C</td>
+                            <td> <span id="gangtokMax_temp">null</span>&#176;C</td>
+                            <td> <span id="gangtokMin_temp">null</span>&#176;C</td>
+                            <td> <span id="gangtokWind_speed">null</span>km/hr </td>
+                            <td> <span id="gangtokHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td> Geyzing</td>
+                            <td> <span id="geyzingTemp">null</span>&#176;C</td>
+                            <td> <span id="geyzingMax_temp">null</span>&#176;C</td>
+                            <td> <span id="geyzingMin_temp">null</span>&#176;C</td>
+                            <td> <span id="geyzingWind_speed">null</span>km/hr </td>
+                            <td> <span id="geyzingHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Namchi</td>
+                            <td> <span id="namchiTemp">null</span>&#176;C</td>
+                            <td> <span id="namchiMax_temp">null</span>&#176;C</td>
+                            <td> <span id="namchiMin_temp">null</span>&#176;C</td>
+                            <td> <span id="namchiWind_speed">null</span>km/hr </td>
+                            <td> <span id="namchiHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Mangan</td>
+                            <td> <span id="manganTemp">null</span>&#176;C</td>
+                            <td> <span id="manganMax_temp">null</span>&#176;C</td>
+                            <td> <span id="manganMin_temp">null</span>&#176;C</td>
+                            <td> <span id="manganWind_speed">null</span>km/hr </td>
+                            <td> <span id="manganHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Singtam</td>
+                            <td> <span id="singtamTemp">null</span>&#176;C</td>
+                            <td> <span id="singtamMax_temp">null</span>&#176;C</td>
+                            <td> <span id="singtamMin_temp">null</span>&#176;C</td>
+                            <td> <span id="singtamWind_speed">null</span>km/hr </td>
+                            <td> <span id="singtamHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Jorethang</td>
+                            <td> <span id="jorethangTemp">null</span>&#176;C</td>
+                            <td> <span id="jorethangMax_temp">null</span>&#176;C</td>
+                            <td> <span id="jorethangMin_temp">null</span>&#176;C</td>
+                            <td> <span id="jorethangWind_speed">null</span>km/hr </td>
+                            <td> <span id="jorethangHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Rangpo</td>
+                            <td> <span id="rangpoTemp">null</span>&#176;C</td>
+                            <td> <span id="rangpoMax_temp">null</span>&#176;C</td>
+                            <td> <span id="rangpoMin_temp">null</span>&#176;C</td>
+                            <td> <span id="rangpoWind_speed">null</span>km/hr </td>
+                            <td> <span id="rangpoHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Soreng</td>
+                            <td> <span id="sorengTemp">null</span>&#176;C</td>
+                            <td> <span id="sorengMax_temp">null</span>&#176;C</td>
+                            <td> <span id="sorengMin_temp">null</span>&#176;C</td>
+                            <td> <span id="sorengWind_speed">null</span>km/hr </td>
+                            <td> <span id="sorengHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Pelling</td>
+                            <td> <span id="pellingTemp">null</span>&#176;C</td>
+                            <td> <span id="pellingMax_temp">null</span>&#176;C</td>
+                            <td> <span id="pellingMin_temp">null</span>&#176;C</td>
+                            <td> <span id="pellingWind_speed">null</span>km/hr </td>
+                            <td> <span id="pellingHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Tadong</td>
+                            <td> <span id="tadongTemp">null</span>&#176;C</td>
+                            <td> <span id="tadongMax_temp">null</span>&#176;C</td>
+                            <td> <span id="tadongMin_temp">null</span>&#176;C</td>
+                            <td> <span id="tadongWind_speed">null</span>km/hr </td>
+                            <td> <span id="tadongHumidity">null</span>% </td>
+                        </tr>
+                        <tr>
+                            <td> Melli</td>
+                            <td> <span id="melliTemp">null</span>&#176;C</td>
+                            <td> <span id="melliMax_temp">null</span>&#176;C</td>
+                            <td> <span id="melliMin_temp">null</span>&#176;C</td>
+                            <td> <span id="melliWind_speed">null</span>km/hr </td>
+                            <td> <span id="melliHumidity">null</span>% </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
+        <!-- _______________________WEATHER SEARCH ENDED_______________________ -->
 
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Chhattisgarh </h5>
-                            <h5 class="card-title text-center temps"><span id="temp5"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity5">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp5">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp5">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed5">null</span> km/hr</p>
+        <!-- _______________________STATE-WISE CARD STARTED_______________________ -->
+        <div class="container-fluid">
+
+            <div class="container py-3" id="temp">
+                <h5 class="card-title mt-3" id="intro">All India state wise weather information</h5>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Andhra Pradesh</h5>
+                                <h5 class="card-title text-center temps"><span id="temp1"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity1">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp1">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp1">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed1">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Arunachal Pradesh </h5>
+                                <h5 class="card-title text-center temps"><span id="temp2"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity2">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp2">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp2">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed2">null</span> km/hr</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Goa</h5>
-                            <h5 class="card-title text-center temps"><span id="temp6"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity6">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp6">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp6">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed6">null</span> km/hr</p>
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Assam </h5>
+                                <h5 class="card-title text-center temps"><span id="temp3"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity3">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp3">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp3">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed3">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Bihar</h5>
+                                <h5 class="card-title text-center temps"><span id="temp4"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity4">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp4">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp4">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed4">null</span> km/hr</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Chhattisgarh </h5>
+                                <h5 class="card-title text-center temps"><span id="temp5"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity5">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp5">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp5">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed5">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Goa</h5>
+                                <h5 class="card-title text-center temps"><span id="temp6"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity6">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp6">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp6">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed6">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Gujarat </h5>
+                                <h5 class="card-title text-center temps"><span id="temp7"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity7">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp7">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp7">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed7">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Haryana</h5>
+                                <h5 class="card-title text-center temps"><span id="temp8"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity8">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp8">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp8">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed8">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Himachal Pradesh </h5>
+                                <h5 class="card-title text-center temps"><span id="temp9"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity9">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp9">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp9">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed9">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Jharkhand</h5>
+                                <h5 class="card-title text-center temps"><span id="temp10"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity10">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp10">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp10">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed10">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Karnataka </h5>
+                                <h5 class="card-title text-center temps"><span id="temp11"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity11">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp11">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp11">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed11">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Kerala</h5>
+                                <h5 class="card-title text-center temps"><span id="temp12"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity12">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp12">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp12">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed12">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Madhya Pradesh </h5>
+                                <h5 class="card-title text-center temps"><span id="temp13"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity13">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp13">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp13">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed13">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Maharashtra</h5>
+                                <h5 class="card-title text-center temps"><span id="temp14"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity14">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp14">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp14">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed14">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Manipur </h5>
+                                <h5 class="card-title text-center temps"><span id="temp15"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity15">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp15">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp15">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed15">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Meghalaya</h5>
+                                <h5 class="card-title text-center temps"><span id="temp16"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity16">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp16">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp16">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed16">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Mizoram </h5>
+                                <h5 class="card-title text-center temps"><span id="temp17"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity17">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp17">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp17">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed17">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Nagaland</h5>
+                                <h5 class="card-title text-center temps"><span id="temp18"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity18">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp18">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp18">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed18">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Odisha </h5>
+                                <h5 class="card-title text-center temps"><span id="temp19"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity19">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp19">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp19">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed19">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Punjab</h5>
+                                <h5 class="card-title text-center temps"><span id="temp20"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity20">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp20">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp20">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed20">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Rajasthan </h5>
+                                <h5 class="card-title text-center temps"><span id="temp21"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity21">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp21">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp21">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed21">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Sikkim</h5>
+                                <h5 class="card-title text-center temps"><span id="temp22"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity22">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp22">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp22">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed22">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Tamil Nadu </h5>
+                                <h5 class="card-title text-center temps"><span id="temp23"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity23">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp23">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp23">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed23">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Telangana</h5>
+                                <h5 class="card-title text-center temps"><span id="temp24"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity24">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp24">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp24">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed24">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Tripura </h5>
+                                <h5 class="card-title text-center temps"><span id="temp25"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity25">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp25">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp25">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed25">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Uttar Pradesh </h5>
+                                <h5 class="card-title text-center temps"><span id="temp26"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity26">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp26">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp26">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed26">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">Uttarakhand </h5>
+                                <h5 class="card-title text-center temps"><span id="temp27"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity27">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp27">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp27">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed27">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 p-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center statesNames">West Bengal </h5>
+                                <h5 class="card-title text-center temps"><span id="temp28"></span> &#176;C </h5>
+                                <div class="container addInfos">
+                                    <p class="card-text text-center">Humidity: <span id="humidity28">null</span>% </p>
+                                    <p class="card-text text-center">Minimum: <span
+                                            id="min_temp28">null</span><span>&#176;C</span> </p>
+                                    <p class="card-text text-center">Maximum: <span id="max_temp28">null</span>
+                                        <span>&#176;C</span>
+                                    </p>
+                                    <p class="card-text text-center">Wind: <span id="wind_speed28">null</span> km/hr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Gujarat </h5>
-                            <h5 class="card-title text-center temps"><span id="temp7"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity7">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp7">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp7">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed7">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Haryana</h5>
-                            <h5 class="card-title text-center temps"><span id="temp8"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity8">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp8">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp8">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed8">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Himachal Pradesh </h5>
-                            <h5 class="card-title text-center temps"><span id="temp9"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity9">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp9">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp9">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed9">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Jharkhand</h5>
-                            <h5 class="card-title text-center temps"><span id="temp10"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity10">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp10">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp10">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed10">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Karnataka </h5>
-                            <h5 class="card-title text-center temps"><span id="temp11"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity11">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp11">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp11">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed11">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Kerala</h5>
-                            <h5 class="card-title text-center temps"><span id="temp12"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity12">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp12">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp12">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed12">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Madhya Pradesh </h5>
-                            <h5 class="card-title text-center temps"><span id="temp13"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity13">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp13">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp13">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed13">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Maharashtra</h5>
-                            <h5 class="card-title text-center temps"><span id="temp14"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity14">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp14">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp14">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed14">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Manipur </h5>
-                            <h5 class="card-title text-center temps"><span id="temp15"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity15">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp15">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp15">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed15">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Meghalaya</h5>
-                            <h5 class="card-title text-center temps"><span id="temp16"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity16">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp16">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp16">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed16">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Mizoram </h5>
-                            <h5 class="card-title text-center temps"><span id="temp17"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity17">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp17">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp17">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed17">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Nagaland</h5>
-                            <h5 class="card-title text-center temps"><span id="temp18"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity18">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp18">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp18">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed18">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Odisha </h5>
-                            <h5 class="card-title text-center temps"><span id="temp19"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity19">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp19">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp19">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed19">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Punjab</h5>
-                            <h5 class="card-title text-center temps"><span id="temp20"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity20">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp20">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp20">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed20">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Rajasthan </h5>
-                            <h5 class="card-title text-center temps"><span id="temp21"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity21">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp21">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp21">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed21">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Sikkim</h5>
-                            <h5 class="card-title text-center temps"><span id="temp22"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity22">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp22">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp22">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed22">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Tamil Nadu </h5>
-                            <h5 class="card-title text-center temps"><span id="temp23"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity23">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp23">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp23">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed23">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Telangana</h5>
-                            <h5 class="card-title text-center temps"><span id="temp24"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity24">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp24">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp24">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed24">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Tripura </h5>
-                            <h5 class="card-title text-center temps"><span id="temp25"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity25">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp25">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp25">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed25">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Uttar Pradesh </h5>
-                            <h5 class="card-title text-center temps"><span id="temp26"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity26">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp26">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp26">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed26">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">Uttarakhand </h5>
-                            <h5 class="card-title text-center temps"><span id="temp27"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity27">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp27">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp27">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed27">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center statesNames">West Bengal </h5>
-                            <h5 class="card-title text-center temps"><span id="temp28"></span> &#176;C </h5>
-                            <div class="container addInfos">
-                                <p class="card-text text-center">Humidity: <span id="humidity28">null</span>% </p>
-                                <p class="card-text text-center">Minimum: <span
-                                        id="min_temp28">null</span><span>&#176;C</span> </p>
-                                <p class="card-text text-center">Maximum: <span id="max_temp28">null</span>
-                                    <span>&#176;C</span>
-                                </p>
-                                <p class="card-text text-center">Wind: <span id="wind_speed28">null</span> km/hr</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
     <!-- _______________________STATE-WISE CARD ENDED_______________________ -->
@@ -689,7 +820,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="/js/jsonData.js"></script>
+    <!-- <script src="/js/tableData.js"></script>
+    <script src="/js/cardData.js"></script> -->
     <script src="/js/common.js"></script>
 </body>
 
