@@ -44,3 +44,12 @@
 #footerCountInfo{
     opacity: 0.9;
 }
+
+/* ____________________________-CSS FOR  TABLEDATA STARTED____________________________- */
+.tableDataColor1{
+    color: rgb(2, 97, 99);
+}
+.tableDataColor2{
+    color: rgb(177, 8, 120);
+}
+/* ____________________________-CSS FOR  TABLEDATA ENDED____________________________- */

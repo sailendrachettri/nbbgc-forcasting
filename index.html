@@ -49,15 +49,15 @@
         <!-- _______________________WEATHER SEARCH STARTED_______________________ -->
         <div class="container" id="searchAndProgress">
             <div class="container d-flex justify-content-center">
-                <form class="d-flex col-6" role="search" id="searchForm">
-                    <input class="form-control me-2" type="search" placeholder="Seacrh location" aria-label="Search"
-                        id="seacrhBox">
-                    <button class="btn btn-outline-success">Search</button>
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Gangtok" aria-label="Search"
+                        id="searchBox">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="submitLocationBtn">Search</button>
                 </form>
             </div>
 
-            <div class="container d-flex justify-content-center flex-row" id="infoTable">
 
+            <div class="table-responsive">
                 <table class="table my-2">
                     <thead>
                         <tr class="table-dark">
@@ -71,12 +71,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="gangtok">Gangtok </td>
-                            <td> <span id="gangtokTemp">null</span>&#176;C</td>
-                            <td> <span id="gangtokMax_temp">null</span>&#176;C</td>
-                            <td> <span id="gangtokMin_temp">null</span>&#176;C</td>
-                            <td> <span id="gangtokWind_speed">null</span>km/hr </td>
-                            <td> <span id="gangtokHumidity">null</span>% </td>
+                            <td class="tableDataColor2 table-info"> <span id="cityName">Gangtok</span> </td>
+                            <td class="tableDataColor2"> <span id="searchCityTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="searchCityMax_temp">null</span>&#176;C
+                            </td>
+                            <td class="tableDataColor2"> <span id="searchCityMin_temp">null</span>&#176;C
+                            </td>
+                            <td class="tableDataColor2"> <span id="searchCityWind_speed">null</span>km/hr
+                            </td>
+                            <td class="tableDataColor2"> <span id="searchCityHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -88,87 +91,88 @@
                         </tr>
 
                         <tr>
-                            <td> Geyzing</td>
-                            <td> <span id="geyzingTemp">null</span>&#176;C</td>
-                            <td> <span id="geyzingMax_temp">null</span>&#176;C</td>
-                            <td> <span id="geyzingMin_temp">null</span>&#176;C</td>
-                            <td> <span id="geyzingWind_speed">null</span>km/hr </td>
-                            <td> <span id="geyzingHumidity">null</span>% </td>
+                            <td> Pakyong</td>
+                            <td class="tableDataColor1"> <span id="pakyongTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="pakyongMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="pakyongMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="pakyongWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor1"> <span id="pakyongHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Namchi</td>
-                            <td> <span id="namchiTemp">null</span>&#176;C</td>
-                            <td> <span id="namchiMax_temp">null</span>&#176;C</td>
-                            <td> <span id="namchiMin_temp">null</span>&#176;C</td>
-                            <td> <span id="namchiWind_speed">null</span>km/hr </td>
-                            <td> <span id="namchiHumidity">null</span>% </td>
+                            <td class="tableDataColor2"> <span id="namchiTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="namchiMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="namchiMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="namchiWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor2"> <span id="namchiHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Mangan</td>
-                            <td> <span id="manganTemp">null</span>&#176;C</td>
-                            <td> <span id="manganMax_temp">null</span>&#176;C</td>
-                            <td> <span id="manganMin_temp">null</span>&#176;C</td>
-                            <td> <span id="manganWind_speed">null</span>km/hr </td>
-                            <td> <span id="manganHumidity">null</span>% </td>
+                            <td class="tableDataColor1"> <span id="manganTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="manganMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="manganMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="manganWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor1"> <span id="manganHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Singtam</td>
-                            <td> <span id="singtamTemp">null</span>&#176;C</td>
-                            <td> <span id="singtamMax_temp">null</span>&#176;C</td>
-                            <td> <span id="singtamMin_temp">null</span>&#176;C</td>
-                            <td> <span id="singtamWind_speed">null</span>km/hr </td>
-                            <td> <span id="singtamHumidity">null</span>% </td>
+                            <td class="tableDataColor2"> <span id="singtamTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="singtamMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="singtamMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="singtamWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor2"> <span id="singtamHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Jorethang</td>
-                            <td> <span id="jorethangTemp">null</span>&#176;C</td>
-                            <td> <span id="jorethangMax_temp">null</span>&#176;C</td>
-                            <td> <span id="jorethangMin_temp">null</span>&#176;C</td>
-                            <td> <span id="jorethangWind_speed">null</span>km/hr </td>
-                            <td> <span id="jorethangHumidity">null</span>% </td>
+                            <td class="tableDataColor1"> <span id="jorethangTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="jorethangMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="jorethangMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="jorethangWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor1"> <span id="jorethangHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Rangpo</td>
-                            <td> <span id="rangpoTemp">null</span>&#176;C</td>
-                            <td> <span id="rangpoMax_temp">null</span>&#176;C</td>
-                            <td> <span id="rangpoMin_temp">null</span>&#176;C</td>
-                            <td> <span id="rangpoWind_speed">null</span>km/hr </td>
-                            <td> <span id="rangpoHumidity">null</span>% </td>
+                            <td class="tableDataColor2"> <span id="rangpoTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="rangpoMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="rangpoMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="rangpoWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor2"> <span id="rangpoHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Soreng</td>
-                            <td> <span id="sorengTemp">null</span>&#176;C</td>
-                            <td> <span id="sorengMax_temp">null</span>&#176;C</td>
-                            <td> <span id="sorengMin_temp">null</span>&#176;C</td>
-                            <td> <span id="sorengWind_speed">null</span>km/hr </td>
-                            <td> <span id="sorengHumidity">null</span>% </td>
+                            <td class="tableDataColor1"> <span id="sorengTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="sorengMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="sorengMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="sorengWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor1"> <span id="sorengHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Pelling</td>
-                            <td> <span id="pellingTemp">null</span>&#176;C</td>
-                            <td> <span id="pellingMax_temp">null</span>&#176;C</td>
-                            <td> <span id="pellingMin_temp">null</span>&#176;C</td>
-                            <td> <span id="pellingWind_speed">null</span>km/hr </td>
-                            <td> <span id="pellingHumidity">null</span>% </td>
+                            <td class="tableDataColor2"> <span id="pellingTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="pellingMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="pellingMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="pellingWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor2"> <span id="pellingHumidity">null</span>% </td>
                         </tr>
                         <tr>
-                            <td> Tadong</td>
-                            <td> <span id="tadongTemp">null</span>&#176;C</td>
-                            <td> <span id="tadongMax_temp">null</span>&#176;C</td>
-                            <td> <span id="tadongMin_temp">null</span>&#176;C</td>
-                            <td> <span id="tadongWind_speed">null</span>km/hr </td>
-                            <td> <span id="tadongHumidity">null</span>% </td>
+                            <td> Yanyang</td>
+                            <td class="tableDataColor1"> <span id="yanyangTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="yanyangMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="yanyangMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor1"> <span id="yanyangWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor1"> <span id="yanyangHumidity">null</span>% </td>
                         </tr>
                         <tr>
                             <td> Melli</td>
-                            <td> <span id="melliTemp">null</span>&#176;C</td>
-                            <td> <span id="melliMax_temp">null</span>&#176;C</td>
-                            <td> <span id="melliMin_temp">null</span>&#176;C</td>
-                            <td> <span id="melliWind_speed">null</span>km/hr </td>
-                            <td> <span id="melliHumidity">null</span>% </td>
+                            <td class="tableDataColor2"> <span id="melliTemp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="melliMax_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="melliMin_temp">null</span>&#176;C</td>
+                            <td class="tableDataColor2"> <span id="melliWind_speed">null</span>km/hr </td>
+                            <td class="tableDataColor2"> <span id="melliHumidity">null</span>% </td>
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
         <!-- _______________________WEATHER SEARCH ENDED_______________________ -->
@@ -820,8 +824,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <!-- <script src="/js/tableData.js"></script>
-    <script src="/js/cardData.js"></script> -->
+    <script src="/js/tableData.js"></script>
+    <!-- <script src="/js/cardData.js"></script> -->
     <script src="/js/common.js"></script>
 </body>
 
