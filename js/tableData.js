@@ -170,7 +170,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Pelling', op
 	})
 .catch(err => console.error(err));
 
-fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tadong', op)
+fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Yanyang', op)
 	.then(response => response.json())
 	.then((response) => {
 
