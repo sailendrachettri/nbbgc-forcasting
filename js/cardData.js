@@ -25,7 +25,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Prade
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Arunachal Pradesh', options)
 	.then(response => response.json())
@@ -40,7 +40,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Arunachal Pr
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Assam', options)
 	.then(response => response.json())
@@ -55,7 +55,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Assam', opti
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Bihar', options)
 	.then(response => response.json())
@@ -70,7 +70,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Bihar', opti
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Chhattisgarh', options)
 	.then(response => response.json())
@@ -85,7 +85,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Chhattisgarh
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Goa', options)
 	.then(response => response.json())
@@ -100,7 +100,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Goa', option
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Gujarat', options)
 	.then(response => response.json())
@@ -115,7 +115,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Gujarat', op
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Haryana', options)
 	.then(response => response.json())
@@ -130,7 +130,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Haryana', op
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Himachal Pradesh', options)
 	.then(response => response.json())
@@ -145,7 +145,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Himachal Pra
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Jharkhand', options)
 	.then(response => response.json())
@@ -160,7 +160,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Jharkhand', 
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Karnataka', options)
 	.then(response => response.json())
@@ -175,7 +175,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Karnataka', 
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kerala', options)
 	.then(response => response.json())
@@ -190,7 +190,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kerala', opt
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Madhya Pradesh', options)
 	.then(response => response.json())
@@ -205,7 +205,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Madhya Prade
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Maharashtra', options)
 	.then(response => response.json())
@@ -220,7 +220,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Maharashtra'
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Manipur', options)
 	.then(response => response.json())
@@ -235,7 +235,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Manipur', op
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Meghalaya', options)
 	.then(response => response.json())
@@ -250,7 +250,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Meghalaya', 
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mizoram', options)
 	.then(response => response.json())
@@ -265,7 +265,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mizoram', op
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Nagaland', options)
 	.then(response => response.json())
@@ -280,7 +280,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Nagaland', o
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Odisha', options)
 	.then(response => response.json())
@@ -295,7 +295,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Odisha', opt
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Punjab', options)
 	.then(response => response.json())
@@ -310,7 +310,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Punjab', opt
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Rajasthan', options)
 	.then(response => response.json())
@@ -325,9 +325,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Rajasthan', 
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
-fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Sikkim', options)
+fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Gangtok', options)
 	.then(response => response.json())
 	.then((response) => {
 
@@ -340,7 +340,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Sikkim', opt
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tamil Nadu', options)
 	.then(response => response.json())
@@ -355,7 +355,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tamil Nadu',
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Hyderabad', options)
 	.then(response => response.json())
@@ -370,7 +370,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Hyderabad', 
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tripura', options)
 	.then(response => response.json())
@@ -385,7 +385,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Tripura', op
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttar Pradesh', options)
 	.then(response => response.json())
@@ -400,7 +400,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttar Prades
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttarakhand', options)
 	.then(response => response.json())
@@ -415,7 +415,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Uttarakhand'
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=West Bengal', options)
 	.then(response => response.json())
@@ -430,5 +430,5 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=West Bengal'
 
 		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
