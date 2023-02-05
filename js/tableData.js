@@ -1,9 +1,9 @@
 const op = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '8eb942e62fmshb1157e8fb54e693p1580e5jsn94ed81c94ed3',
-        'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-    }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'c78fb667a3msh7d7e2fb02212684p19c0a3jsn6c1847f46e85',
+		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+	}
 };
 
 // api alternative 1: 31969a1614msh88ac34bc8e6c48bp1b89e5jsn30b700019bd0
@@ -20,30 +20,30 @@ const op = {
 
 // __________________________________LOCATION INFO FOR SEARCH QUERYES STARTED____________________________________
 const weatherInfo = (location) => {
-    cityName.innerHTML = location.toUpperCase();
+	cityName.innerHTML = location.toUpperCase();
 
-    fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${location}`, op)
-        .then(response => response.json())
-        .then((response) => {
+	fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${location}`, op)
+		.then(response => response.json())
+		.then((response) => {
 
-            searchCityTemp.innerHTML = response.temp
-            searchCityMax_temp.innerHTML = response.max_temp
-            searchCityMin_temp.innerHTML = response.min_temp
-            searchCityWind_speed.innerHTML = response.wind_speed
-            searchCityHumidity.innerHTML = response.humidity
+			searchCityTemp.innerHTML = response.temp
+			searchCityMax_temp.innerHTML = response.max_temp
+			searchCityMin_temp.innerHTML = response.min_temp
+			searchCityWind_speed.innerHTML = response.wind_speed
+			searchCityHumidity.innerHTML = response.humidity
 
 
-            //    console.log(response)
-        })
-        .catch(err => console.error(err));
+			//    console.log(response)
+		})
+		.catch(err => console.error(err));
 }
 
 submitLocationBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // prevents from reloading webpage
-    // if user submit empty field then the location will be "Gangtok" by default
-    weatherInfo((searchBox.value == "") ? "Gangtok" : searchBox.value); // just a if-else in one line
+	e.preventDefault(); // prevents from reloading webpage
+	// if user submit empty field then the location will be "Gangtok" by default
+	weatherInfo((searchBox.value == "") ? "Gangtok" : searchBox.value); // just a if-else in one line
 
-    searchBox.value = "";  //   optional fearure
+	searchBox.value = "";  //   optional fearure
 });
 
 weatherInfo("Gangtok");
@@ -61,9 +61,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Pakyong', op
 		pakyongHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Namchi', op)
 	.then(response => response.json())
@@ -76,9 +76,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Namchi', op)
 		namchiHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mangan', op)
 	.then(response => response.json())
@@ -91,9 +91,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mangan', op)
 		manganHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Singtam', op)
 	.then(response => response.json())
@@ -106,9 +106,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Singtam', op
 		singtamHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Jorethang', op)
 	.then(response => response.json())
@@ -121,9 +121,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Jorethang', 
 		jorethangHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Rangpo', op)
 	.then(response => response.json())
@@ -136,9 +136,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Rangpo', op)
 		rangpoHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Soreng', op)
 	.then(response => response.json())
@@ -151,9 +151,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Soreng', op)
 		sorengHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Pelling', op)
 	.then(response => response.json())
@@ -166,9 +166,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Pelling', op
 		pellingHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Yanyang', op)
 	.then(response => response.json())
@@ -181,9 +181,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Yanyang', op
 		yanyangHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Melli', op)
 	.then(response => response.json())
@@ -196,6 +196,6 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Melli', op)
 		melliHumidity.innerHTML = response.humidity
 
 
-		   //    console.log(response)
+		//    console.log(response)
 	})
-.catch(err => console.error(err));
+	.catch(err => console.error(err));
