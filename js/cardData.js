@@ -1,16 +1,8 @@
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'ae0cc1874emshef71295615a96cdp1138fcjsnc123ec78923c',
-// 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-// 	}
-// };
-
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'ae0cc1874emshef71295615a96cdp1138fcjsnc123ec78923c',
-		'X-RapidAPI-Host': 'yahoo-weather5.p.rapidapi.com'
+		'X-RapidAPI-Key': '87c05fdb63mshc6f545102925a69p1efaafjsn5fd53b3d0c9f',
+		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };
 
@@ -18,9 +10,6 @@ const options = {
 // api alternative 2: 5400ec26admsh5e70570b1dfb135p102582jsn68b10227f109
 // api alternative 3: 87c05fdb63mshc6f545102925a69p1efaafjsn5fd53b3d0c9f
 // api alternative 4: 8eb942e62fmshb1157e8fb54e693p1580e5jsn94ed81c94ed3
-// api alternative 5: 022d945653mshbbcb6bc18d60f45p19b131jsnddb9fdb2398c
-// api alternative 6: b59fc714cbmsh56e7b77984ac18dp102aadjsn55f33d515b27
-// api alternative 7: dca0ed6359mshaba031069aad54fp169ebcjsn9aa8a35ab51c
 
 
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Pradesh', options)
@@ -34,7 +23,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Andhra Prade
 		wind_speed1.innerHTML = response.wind_speed
 
 
-		// console.log(response)
+		//    console.log(response)
 	})
 	.catch(err => console.error(err));
 
@@ -442,3 +431,4 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=West Bengal'
 		//    console.log(response)
 	})
 	.catch(err => console.error(err));
+
