@@ -1,5 +1,5 @@
 
-# NBBGC-FORECASTING - A Weather Web Application
+# nbbgc-forecasting - A weather web application
 
 - The weather application will provide users with real-time weather information, forecasts, and other
 weather-related data, which can help them make better decisions about their day-to-day activities.
@@ -14,8 +14,7 @@ weather-related data, which can help them make better decisions about their day-
   
 ## App on Production
 
-[This WebApp is not yet published]
-The developer version of newsapi not work in production
+https://nbbgc-forcasting.netlify.app/
 
 ## Run Locally
 
