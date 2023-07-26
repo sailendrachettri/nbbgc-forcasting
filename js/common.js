@@ -7,13 +7,22 @@ let year = date.getFullYear();
 footerYear.innerText = year;
 
 // footer countdown
-let count = 0;
 let footerCount = document.getElementById('footerCount');
-function countDownSeconds() {
-    count += 1;
-    footerCount.innerHTML = count;
-}
-setInterval(countDownSeconds, 1000);
+let footerCountMin = document.querySelector('#footerCountMin')
+
+let sec = 0;
+let mins= 0;
+
+setInterval(()=>{
+  sec++;
+  footerCount.innerText = sec;
+  footerCountMin.innerText = mins;
+  if(sec > 59){
+    sec = 0;
+    mins++;
+  }
+},1000)
+
 
 // ________________________FOOTER ENDED________________________
 
