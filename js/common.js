@@ -39,9 +39,19 @@ setAmPm.innerHTML = amPM;
 
 
 // ________________________AUTO SCROLL FUNCNALITY STARTED________________________
+let scrollVal = 0
+let scrollInterval;
 function pageScroll() {
-    window.scrollBy(0, 1);
-    scrolldelay = setTimeout(pageScroll, 100);
+    scrollVal++;
+    if(scrollVal == 1){
+      scrollInterval = setInterval(()=>{
+        window.scrollBy(0,1)
+      },100);  
+    }
+    else if(scrollVal == 2){
+        clearInterval(scrollInterval)
+        scrollVal = 0
+    }
 }
 
 let flexSwitchCheckDefault = document.getElementById('flexSwitchCheckDefault');
