@@ -8,48 +8,50 @@
     position: relative;
 }
 
-#nbbgcLogo{
+#nbbgcLogo {
     font-family: 'Space Grotesk', sans-serif;
-    
+
 }
 
-#nbbgcIntro{
+#nbbgcIntro {
     font-family: 'Orbitron', sans-serif;
     font-weight: 400;
 }
 
-#intro{
+#intro {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
 }
 
-.statesNames{
+.statesNames {
     font-family: 'Bree Serif', serif;
     font-weight: 400;
 }
 
-.addInfos{
+.addInfos {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
 }
 
-.temps{
+.temps {
     color: rgb(11 139 115);
 }
 
-#dateTimeContainer{
+#dateTimeContainer {
     opacity: 0.5;
 }
 
-#footerCountInfo{
+#footerCountInfo {
     opacity: 0.9;
 }
 
 /* ____________________________-CSS FOR  TABLEDATA STARTED____________________________- */
-.tableDataColor1{
+.tableDataColor1 {
     color: rgb(2, 97, 99);
 }
-.tableDataColor2{
+
+.tableDataColor2 {
     color: rgb(177, 8, 120);
 }
+
 /* ____________________________-CSS FOR  TABLEDATA ENDED____________________________- */

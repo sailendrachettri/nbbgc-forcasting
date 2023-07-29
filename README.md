@@ -6,7 +6,7 @@ weather-related data, which can help them make better decisions about their day-
 
 ## Tech Stack
 
-**Design:** Vanilla CSS
+**Design:** Bootstrap and CSS
 
 **API:** api-ninjas
 
@@ -47,7 +47,16 @@ Start the Server
 <p><img src="https://drive.google.com/uc?export=view&id=1a3Bgp5Jfg3w8PjCLyu2s2F6H_9UOYduc" alt="Weather page"></p>
 
 # Contact
-<p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/sailendrachettri/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/sailendrachettri/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
+<p>
+  <span style="margin-right: 30px;"></span>
+  <a href="https://www.linkedin.com/in/sailendrachettri/">
+    <img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a>
+  
+  <span style="margin-right: 30px;"></span>
+  <a href="https://github.com/sailendrachettri/">
+    <img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;">
+  </a>
+</p>
 
 
 ## Made By
